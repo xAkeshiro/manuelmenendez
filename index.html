@@ -5,6 +5,36 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Manuel C. Menendez III · 孟德士</title>
 <meta name="description" content="Manuel C. Menendez III, founder, chairman and CEO of MCM Group Holdings. A pioneer of U.S.-China trade since 1979.">
+<link rel="canonical" href="https://manuelmenendez.vercel.app/">
+<meta name="theme-color" content="#171110">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='9' fill='%23C24A2B'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' fill='%23F4ECDB' font-family='serif' font-weight='700'%3E%E5%AD%9F%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Manuel C. Menendez III · 孟德士">
+<meta property="og:description" content="Founder, chairman and CEO of MCM Group Holdings. A pioneer of U.S.-China trade since 1979 — world peace through world trade.">
+<meta property="og:url" content="https://manuelmenendez.vercel.app/">
+<meta property="og:image" content="https://manuelmenendez.vercel.app/og.jpg">
+<meta property="og:image:width" content="860">
+<meta property="og:image:height" content="1075">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Manuel C. Menendez III · 孟德士">
+<meta name="twitter:description" content="Founder, chairman and CEO of MCM Group Holdings. A pioneer of U.S.-China trade since 1979.">
+<meta name="twitter:image" content="https://manuelmenendez.vercel.app/og.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Manuel C. Menendez III",
+  "alternateName": ["Manny Menendez", "Meng Deshi", "孟德士"],
+  "jobTitle": "Founder, Chairman & CEO",
+  "worksFor": {"@type": "Organization", "name": "MCM Group Holdings Ltd."},
+  "alumniOf": {"@type": "CollegeOrUniversity", "name": "Montclair State University"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Gig Harbor", "addressRegion": "WA", "addressCountry": "US"},
+  "url": "https://manuelmenendez.vercel.app/",
+  "image": "https://manuelmenendez.vercel.app/og.jpg",
+  "sameAs": ["https://www.linkedin.com/in/manuel-c-menendez-iii-7492b336a/"],
+  "description": "American businessman and pioneer of U.S.-China trade since 1979. Helped assemble the first U.S.-China equity joint venture; named 孟德士 (Meng Deshi) by Deng Xiaoping in 1985."
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=IBM+Plex+Mono:wght@300;400&family=Noto+Serif+SC:wght@600;900&display=swap" rel="stylesheet">
@@ -300,6 +330,61 @@
   .foot__col a{color:var(--fg);text-decoration-color:var(--dim);text-underline-offset:4px}
   .foot__col a:hover{text-decoration-color:var(--cinnabar)}
 
+  /* ------- scroll progress ------- */
+  .progress{
+    position:fixed;top:0;left:0;right:0;height:2px;z-index:70;pointer-events:none;
+    background:var(--cinnabar);transform:scaleX(0);transform-origin:left;
+  }
+
+  /* ------- mobile menu ------- */
+  .nav__burger{
+    display:none;background:none;border:0;cursor:pointer;padding:8px 0 8px 14px;
+    color:inherit;font-family:var(--garamond);font-size:13px;
+    letter-spacing:.26em;text-transform:uppercase;font-weight:500;
+  }
+  .mnav{
+    position:fixed;inset:0;z-index:80;background:#171110;color:#DCCCA6;
+    display:none;flex-direction:column;justify-content:center;
+    padding:0 clamp(22px,7vw,56px);
+  }
+  .mnav.is-open{display:flex}
+  .mnav__close{
+    position:absolute;top:20px;right:22px;background:none;border:0;cursor:pointer;
+    color:inherit;font-family:var(--garamond);font-size:13px;
+    letter-spacing:.26em;text-transform:uppercase;font-weight:500;padding:8px;
+  }
+  .mnav a{
+    display:block;text-decoration:none;
+    font-family:var(--marcellus);font-size:clamp(34px,9vw,46px);line-height:1.5;
+  }
+  .mnav a .zh{font-family:var(--cjk);font-weight:600;font-size:.55em;color:#8E7F66;margin-left:.8em}
+  .mnav__foot{margin-top:42px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#8E7F66}
+  .mnav__foot a{font-family:var(--garamond);font-size:12px;display:inline;text-decoration:underline;text-underline-offset:4px}
+
+  /* ------- in his words ------- */
+  .voices__grid{
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:clamp(34px,4.5vw,64px);border-top:1px solid var(--line);
+  }
+  .voice{padding-top:30px;position:relative}
+  .voice::before{
+    content:"";position:absolute;top:-1px;left:0;width:46px;height:2px;background:var(--cinnabar);
+  }
+  .voice blockquote{
+    font-family:var(--garamond);font-style:italic;font-weight:400;
+    font-size:clamp(20px,1.8vw,24px);line-height:1.45;
+  }
+  .voice figcaption{
+    margin-top:20px;font-size:11.5px;letter-spacing:.26em;
+    text-transform:uppercase;color:var(--dim);line-height:1.9;
+  }
+
+  .foot__top{
+    display:inline-block;margin-bottom:30px;text-decoration:none;
+    font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim);
+  }
+  .foot__top:hover{color:var(--cinnabar)}
+
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     .band__track{animation:none}
@@ -310,6 +395,8 @@
   @media (max-width:940px){
     body{font-size:17px}
     .nav__links{display:none}
+    .nav__burger{display:block}
+    .voices__grid{grid-template-columns:1fr;gap:38px}
     .fold{display:block;min-height:0}
     .hero{display:block;min-height:auto;padding-top:108px}
     .hero__frame{max-width:none}
@@ -338,6 +425,7 @@
 </head>
 <body>
 <div class="grain" aria-hidden="true"></div>
+<div class="progress" data-progress aria-hidden="true"></div>
 
 <nav class="nav" data-load>
   <a class="nav__mark" href="#top">Menendez <span class="zh">孟德士</span></a>
@@ -346,7 +434,16 @@
     <a href="#chronology">Chronology</a>
     <a href="#press">Press</a>
   </div>
+  <button class="nav__burger" data-menu-open aria-label="Open menu" aria-expanded="false" aria-controls="mnav">Menu</button>
 </nav>
+
+<div class="mnav" id="mnav" aria-hidden="true">
+  <button class="mnav__close" data-menu-close aria-label="Close menu">Close</button>
+  <a href="#story">Story <span class="zh">故事</span></a>
+  <a href="#chronology">Chronology <span class="zh">年表</span></a>
+  <a href="#press">Press <span class="zh">报道</span></a>
+  <p class="mnav__foot">Menendez · 孟德士 · <a href="https://www.linkedin.com/in/manuel-c-menendez-iii-7492b336a/" target="_blank" rel="noopener">LinkedIn</a></p>
+</div>
 
 <main id="top">
 
@@ -498,6 +595,30 @@
     </div>
   </section>
 
+  <!-- ============ IN HIS WORDS ============ -->
+  <section id="words" class="sec-pad" data-theme="paper">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="kicker" data-fade>In his words</span>
+        <h2><span class="mask"><span class="mi">Convictions, on the record</span></span></h2>
+      </div>
+      <div class="voices__grid">
+        <figure class="voice" data-fade>
+          <blockquote>&ldquo;Tariffs don&rsquo;t work. Tariffs anywhere in the world don&rsquo;t work. Because the only people who pay the tariffs are the consumers.&rdquo;</blockquote>
+          <figcaption>China Int&rsquo;l Supply Chain Expo<br>Beijing · 2025</figcaption>
+        </figure>
+        <figure class="voice" data-fade>
+          <blockquote>&ldquo;There are more successes than failures in China&ndash;U.S. cooperation.&rdquo;</blockquote>
+          <figcaption>Global Times interview<br>2024</figcaption>
+        </figure>
+        <figure class="voice" data-fade>
+          <blockquote>On China&rsquo;s four decades of growth: &ldquo;Not good &mdash; it&rsquo;s been a miracle.&rdquo;</blockquote>
+          <figcaption>CGTN profile<br>2023</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ PRESS ============ -->
   <section id="press" class="sec-pad" data-theme="lacquer">
     <div class="wrap">
@@ -557,6 +678,7 @@
   <!-- ============ FOOTER ============ -->
   <footer data-theme="lacquer">
     <div class="wrap">
+      <a class="foot__top" href="#top">&uarr; Back to top</a>
       <div class="foot__cjk" data-fade aria-hidden="true">孟德士</div>
       <div class="foot__row" data-fade>
         <div class="foot__col">
@@ -573,6 +695,41 @@
 
 </main>
 
+<script>
+(function(){
+  // menu + progress are plain JS so they work without GSAP / with reduced motion
+  var mnav = document.getElementById('mnav');
+  var burger = document.querySelector('[data-menu-open]');
+  function setMenu(open){
+    mnav.classList.toggle('is-open', open);
+    mnav.setAttribute('aria-hidden', String(!open));
+    burger.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  burger.addEventListener('click', function(){ setMenu(true); });
+  document.querySelector('[data-menu-close]').addEventListener('click', function(){ setMenu(false); });
+  mnav.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(){ setMenu(false); });
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && mnav.classList.contains('is-open')) setMenu(false);
+  });
+
+  var bar = document.querySelector('[data-progress]');
+  var ticking = false;
+  function paint(){
+    ticking = false;
+    var doc = document.documentElement;
+    var max = doc.scrollHeight - window.innerHeight;
+    bar.style.transform = 'scaleX(' + (max > 0 ? Math.min(window.scrollY / max, 1) : 0) + ')';
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking){ ticking = true; requestAnimationFrame(paint); }
+  }, {passive:true});
+  window.addEventListener('resize', paint);
+  paint();
+})();
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script>
