@@ -749,17 +749,24 @@
   };
   function setTheme(name){
     gsap.to('html', Object.assign({
-      duration: isMobile ? .3 : .9,
+      duration: isMobile ? .3 : .65,
       ease: isMobile ? 'power1.out' : 'power2.inOut',
       overwrite:'auto'
     }, THEMES[name]));
   }
-  document.querySelectorAll('[data-theme]').forEach(function(sec){
+  // Deterministic theme switching: each section flips the palette the moment
+  // its top reaches the trigger line, and scrolling back above it restores the
+  // previous section's palette. onToggle windows could overlap/gap between
+  // adjacent sections and miss the flip (e.g. at "In his words").
+  var themed = gsap.utils.toArray('[data-theme]');
+  themed.forEach(function(sec, i){
+    var prev = themed[i-1];
     ScrollTrigger.create({
       trigger:sec,
-      start: isMobile ? 'top 78%' : 'top 55%',
-      end:   isMobile ? 'bottom 22%' : 'bottom 55%',
-      onToggle:function(self){ if(self.isActive) setTheme(sec.dataset.theme); }
+      start: isMobile ? 'top 75%' : 'top 62%',
+      end:'bottom top',
+      onEnter:function(){ setTheme(sec.dataset.theme); },
+      onLeaveBack:function(){ if (prev) setTheme(prev.dataset.theme); }
     });
   });
 
